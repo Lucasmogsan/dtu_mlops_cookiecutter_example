@@ -5,6 +5,7 @@ import os
 
 def mnist():
     """Return train and test dataset for MNIST."""
+    print('Load MNIST data')
 
     # Define paths:
     current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -38,6 +39,7 @@ def normalize():
     normalize the tensor (mean 0 and std 1),
     save this intermediate representation to the data/processed folder
     """
+    print('Normalize data and save to processed folder')
 
     # Define paths:
     current_dir = os.path.dirname(os.path.realpath(__file__))

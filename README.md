@@ -6,6 +6,12 @@ simple image classification from dtu course
 
 In package root from terminal:
 
+Process data:
+```bash
+python dtu_mlops_cookiecutter_example/data/make_dataset.py
+```
+
+
 Train:
 ```bash
 python dtu_mlops_cookiecutter_example/train_model.py train

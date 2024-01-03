@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+requirements_dev.txt
+dtu_mlops_cookiecutter_example/__init__.py
+dtu_mlops_cookiecutter_example/predict_model.py
+dtu_mlops_cookiecutter_example/train_model.py
+dtu_mlops_cookiecutter_example.egg-info/PKG-INFO
+dtu_mlops_cookiecutter_example.egg-info/SOURCES.txt
+dtu_mlops_cookiecutter_example.egg-info/dependency_links.txt
+dtu_mlops_cookiecutter_example.egg-info/requires.txt
+dtu_mlops_cookiecutter_example.egg-info/top_level.txt

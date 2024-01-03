@@ -4,6 +4,14 @@ simple image classification from dtu course
 
 ## Running code
 
+Clone repo and pull data
+```bash
+git clone <my_repository>
+cd <my_repository>
+dvc pull
+```
+
+
 In package root from terminal:
 
 Process data:

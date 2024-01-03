@@ -98,7 +98,7 @@ def train(lr, epochs, batch_size, model_name):
 
 ## EVALUATION
 @click.command()
-@click.argument("model_checkpoint", help="name of model to evaluate")
+@click.argument("model_checkpoint")
 def evaluate(model_checkpoint):
     """Evaluate a trained model."""
     print("Evaluating like my life dependends on it")

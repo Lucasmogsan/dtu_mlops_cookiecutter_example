@@ -2,7 +2,7 @@ import torch
 # TODO: Not working as train has some references that doesn't work...
 
 
-#from dtu_mlops_cookiecutter_example.train_model import train
+# from dtu_mlops_cookiecutter_example.train_model import train
 
 # def test_train_improves_over_time():
 
@@ -15,4 +15,3 @@ import torch
 
 #     # Check that the loss has decreased
 #     assert final_loss < initial_loss
-

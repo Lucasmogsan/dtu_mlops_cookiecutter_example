@@ -3,6 +3,7 @@ from tests import _PATH_DATA, _PROJECT_ROOT, _TEST_ROOT
 import torch
 import pytest
 
+
 @pytest.mark.parametrize("batch_size", [1, 8, 16])
 def test_model(batch_size):
     # Test of model (with random input)

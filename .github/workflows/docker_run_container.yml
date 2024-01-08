@@ -1,0 +1,19 @@
+name: Docker Container Test
+
+on:
+    push:
+        branches: [ master, main ]
+    pull_request:
+        branches: [ master, main ]
+
+jobs:
+    build_docker:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            
+            - name: Run container
+              run: |
+                docker run lucasmogsan/trainer:latest

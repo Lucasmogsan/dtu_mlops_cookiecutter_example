@@ -7,6 +7,11 @@ Requires-Python: ~=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: torch>=2.1.0
+Requires-Dist: click>=8.1.7
+Requires-Dist: numpy>=1.24.1
+Requires-Dist: matplotlib>=3.8.2
+Requires-Dist: pytest>=7.4.4
+Requires-Dist: coverage
 Provides-Extra: dev
 Requires-Dist: pre-commit>=3.5.0; extra == "dev"
 Requires-Dist: pytest>=7.4.3; extra == "dev"
@@ -19,6 +24,70 @@ Requires-Dist: mkdocstrings[python]>=0.18; extra == "dev"
 # dtu_mlops_cookiecutter_example
 
 simple image classification from dtu course
+
+Things implemented:
+1. Cookiecutter
+2. dvc
+3. docker
+4. pytest
+
+## Running code
+
+Clone repo and pull data
+```bash
+git clone <my_repository>
+cd <my_repository>
+dvc pull
+```
+
+
+In package root from terminal:
+
+Process data:
+```bash
+python dtu_mlops_cookiecutter_example/data/make_dataset.py
+```
+
+Train:
+```bash
+python dtu_mlops_cookiecutter_example/train_model.py train
+```
+
+Evaluate:
+```bash
+python dtu_mlops_cookiecutter_example/train_model.py evaluate model.pt
+```
+
+Predict:
+```bash
+python dtu_mlops_cookiecutter_example/predict_model.py predict model.pt data/processed/test_images.pt
+python dtu_mlops_cookiecutter_example/predict_model.py predict model.pt data/np_image_test.npy
+```
+
+# Docker
+
+See [docker README](dockerfiles/README.md)
+
+# Pytest (and using coverage)
+
+Put ```test_XX.py``` files in ```tests``` folder.
+To run tests:
+```bash
+pytest tests/<specify-test-file-if-wanted>
+```
+
+Measure the **code coverage** (i.e. the percentage of your codebase that actually gets run when all your tests are executed).
+
+
+```bash
+coverage run -m pytest tests/
+```
+
+```bash
+coverage report -m
+coverage report -m --omit "tests/*"
+```
+
 
 ## Project structure
 

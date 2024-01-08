@@ -18,7 +18,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 current_dir = os.path.dirname(os.path.realpath(__file__))
 raw_data_dir = os.path.join(current_dir, '../data/raw/corruptmnist')
 processed_data_dir = os.path.join(current_dir, '../data/processed')
-models_dir = os.path.join(current_dir, 'models')
+models_dir = os.path.join(current_dir, '../models')
 visualization_dir = os.path.join(current_dir, '../reports/figures')
 
 # Create directories for outputs if they don't exist

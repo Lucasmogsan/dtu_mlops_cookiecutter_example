@@ -2,6 +2,12 @@
 
 simple image classification from dtu course
 
+Things implemented:
+1. Cookiecutter
+2. dvc
+3. docker
+4. pytest
+
 ## Running code
 
 Clone repo and pull data
@@ -35,6 +41,29 @@ python dtu_mlops_cookiecutter_example/predict_model.py predict model.pt data/pro
 python dtu_mlops_cookiecutter_example/predict_model.py predict model.pt data/np_image_test.npy
 ```
 
+# Docker
+
+See [docker README](dockerfiles/README.md)
+
+# Pytest (and using coverage)
+
+Put ```test_XX.py``` files in ```tests``` folder.
+To run tests:
+```bash
+pytest tests/<specify-test-file-if-wanted>
+```
+
+Measure the **code coverage** (i.e. the percentage of your codebase that actually gets run when all your tests are executed).
+
+
+```bash
+coverage run -m pytest tests/
+```
+
+```bash
+coverage report -m
+coverage report -m --omit "tests/*"
+```
 
 
 ## Project structure

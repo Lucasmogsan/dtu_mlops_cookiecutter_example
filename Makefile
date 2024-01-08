@@ -22,6 +22,11 @@ requirements:
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 	$(PYTHON_INTERPRETER) -m pip install .
 
+## Make coverage report
+coverage: requirements
+	coverage run -m pytest
+	coverage report -m --omit="tests/*"
+
 ## Install Developer Python Dependencies
 dev_requirements: requirements
 	$(PYTHON_INTERPRETER) -m pip install .["dev"]

@@ -75,7 +75,8 @@ These can be manually deactivated (if some workflows should not be tested) on Gi
 **ruff** and **mypy** are used to check the code through. An implementation of testing with both these tools are added to codecheck workflow.
 
 
-**Docker**: Setup secrets (docker_token, docker_name, docker_repo)
+**Docker**: Setup secrets (docker_token, docker_username, docker_desired_reponame).
+workflows added to folder.
 
 
 ## Project structure

@@ -10,9 +10,9 @@ def mnist(path_data=None):
         raise ValueError("No path to data specified")
 
     # Define paths:
-    current_dir = os.path.dirname(os.path.realpath(__file__))
+    #current_dir = os.path.dirname(os.path.realpath(__file__))
     raw_dir = os.path.join(path_data, "raw/corruptmnist")
-    processed_dir = os.path.join(path_data, "processed")
+    #processed_dir = os.path.join(path_data, "processed")
 
     # Load data from files:
     train_data, train_labels = [], []
@@ -46,7 +46,7 @@ def normalize():
     print("Normalize data and save to processed folder")
 
     # Define paths:
-    current_dir = os.path.dirname(os.path.realpath(__file__))
+    #current_dir = os.path.dirname(os.path.realpath(__file__))
     raw_dir = "data/raw/corruptmnist"
     processed_dir = "data/processed"
 

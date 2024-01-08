@@ -2,7 +2,7 @@ import torch
 import pytest
 import os.path
 from dtu_mlops_cookiecutter_example.data.make_dataset import mnist
-from tests import _PATH_DATA, _PROJECT_ROOT, _TEST_ROOT, _NON_EXISTING_PATH
+from tests import _PATH_DATA, _NON_EXISTING_PATH
 
 
 @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")  # skip test if data is not found

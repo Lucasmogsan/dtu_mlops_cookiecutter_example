@@ -1,5 +1,4 @@
 from dtu_mlops_cookiecutter_example.models.model import myawesomemodel as model
-from tests import _PATH_DATA, _PROJECT_ROOT, _TEST_ROOT
 import torch
 import pytest
 

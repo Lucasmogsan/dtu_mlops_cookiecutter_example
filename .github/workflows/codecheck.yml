@@ -44,4 +44,4 @@ jobs:
     
     - name: Test single file with mypy
       run: |
-        mypy tests/test_model.py
+        mypy dtu_mlops_cookiecutter_example/models/model.py 

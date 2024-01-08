@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  # For the trainer, we can use an image from local or Docker Hub
+  train:
+    image: "lucasmogsan/trainer:latest" # Pull an image from local image or (if not exists) Docker registry, i.e. Docker Hub
+    container_name: trainer_test  # Name the container
+    volumes:  # Mount the current directory on the host to the container
+      - ./dtu_mlops_cookiecutter_example/models:/dtu_mlops_cookiecutter_example/models/
+    
+  # For the predictor, we build the image from the Dockerfile
+  predict:
+    image: "predictor:latest" # Naming the image... as it cannot pull this image from Docker Hub (doesn't exists)
+    build: 
+      context: .  # Build the image from the current directory
+      dockerfile: dockerfiles/predict.dockerfile  # Use the Dockerfile specified
+      cache_from: # Use the cache from the image specified (either from)
+        - lucasmogsan/predict:latest
+    volumes:  # Mount directory (not files) on the host to the container (to share data between containers and host)
+      - ./dtu_mlops_cookiecutter_example/models:/dtu_mlops_cookiecutter_example/models
+      - ./data:/data
+    command:  # Run the command specified (as these are arguments to the entrypoint given in the Dockerfile)
+      - /dtu_mlops_cookiecutter_example/models/model.pt
+      - /data/np_image_test.npy
+    

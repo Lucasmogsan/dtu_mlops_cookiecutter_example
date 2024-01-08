@@ -21,6 +21,12 @@ processed_data_dir = os.path.join(current_dir, '../data/processed')
 models_dir = os.path.join(current_dir, 'models')
 visualization_dir = os.path.join(current_dir, '../reports/figures')
 
+# Create directories for outputs if they don't exist
+if not os.path.exists(models_dir):
+    os.makedirs(models_dir)
+if not os.path.exists(visualization_dir):
+    os.makedirs(visualization_dir)
+
 
 
 ## TRAINING

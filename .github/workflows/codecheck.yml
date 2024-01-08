@@ -38,5 +38,6 @@ jobs:
 
     - name: Test with ruff
       run: |
-        ruff check .
-        ruff format .
+      ruff format .  
+      ruff check .
+        

@@ -45,7 +45,7 @@ python dtu_mlops_cookiecutter_example/predict_model.py predict model.pt data/np_
 
 See [docker README](dockerfiles/README.md)
 
-# Pytest (and using coverage)
+# Unit-test (using Pytest and Coverage)
 
 Put ```test_XX.py``` files in ```tests``` folder.
 To run tests:
@@ -67,7 +67,12 @@ coverage report -m --omit "tests/*"
 
 # Github actions
 
-**dvc**: Added gdrive key from local cache - pydrive2fs - default.json file to github secrets
+See folder ```.github/workflows``` where the different workflows are located.  
+These can be manually deactivated (if some workflows should not be tested) on Github (```Actions``` - ```<specific workflow>``` (below All workflows) - ```...``` - ```disable workflow```)
+
+**dvc**: Added gdrive key from local cache - pydrive2fs - default.json file to github secrets. Thus we can pull the data through the tests workflow.
+
+**ruff** and **mypy** are used to check the code through. An implementation of testing with both these tools are added to codecheck workflow.
 
 
 ## Project structure

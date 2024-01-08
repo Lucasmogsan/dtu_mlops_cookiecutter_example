@@ -8,7 +8,7 @@ services:
     volumes:  # Mount the current directory on the host to the container
       - ./dtu_mlops_cookiecutter_example/models:/dtu_mlops_cookiecutter_example/models/
     
-  # For the predictor, we build the image from the Dockerfile
+  # For the predictor, we build the image from the Dockerfile (just to test it out)
   predict:
     image: "predictor:latest" # Naming the image... as it cannot pull this image from Docker Hub (doesn't exists)
     build: 

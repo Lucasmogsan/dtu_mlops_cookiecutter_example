@@ -75,6 +75,9 @@ These can be manually deactivated (if some workflows should not be tested) on Gi
 **ruff** and **mypy** are used to check the code through. An implementation of testing with both these tools are added to codecheck workflow.
 
 
+**Docker**
+
+
 ## Project structure
 
 The directory structure of the project looks like this:

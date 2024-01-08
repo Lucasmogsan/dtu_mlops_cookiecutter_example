@@ -65,6 +65,10 @@ coverage report -m
 coverage report -m --omit "tests/*"
 ```
 
+# Github actions
+
+**dvc**: Added gdrive key from local cache - pydrive2fs - default.json file to github secrets
+
 
 ## Project structure
 

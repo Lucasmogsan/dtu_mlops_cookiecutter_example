@@ -99,6 +99,8 @@ def train(lr, epochs, batch_size, model_name):
     else:
         torch.save(model, models_dir + f"/{model_name}.pt")
         plt.savefig(visualization_dir + '/train_loss.png')
+    
+    return loss.item()
 
 
 

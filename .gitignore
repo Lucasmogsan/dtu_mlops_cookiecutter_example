@@ -3,3 +3,4 @@ __pycache__/
 *.py[cod]
 
 /data
+/lms_mlops_data_bucket
